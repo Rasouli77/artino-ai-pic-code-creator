@@ -26,6 +26,12 @@ h1 {
     margin: 35px;
 }
 
+@media(max-width:767px) {
+  h1 {
+    text-align: center;
+  }
+}
+
 .hide {
     display: none;
 }

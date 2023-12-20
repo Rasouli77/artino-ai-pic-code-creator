@@ -69,9 +69,10 @@ function test() {
     result.innerHTML = year.toString().slice(-1) + week + source.options[source.selectedIndex].value + subject.options[subject.selectedIndex].value + style.options[style.selectedIndex].value + ratio.options[ratio.selectedIndex].value + number.toString().padStart(3, '0') + type.options[type.selectedIndex].value;
 
     
-     if (number === 200) {
+     if (number === 250) {
+         console.log("test")
         number = 0;
-        number++
+        
     } 
 
      // Store the updated number in localStorage

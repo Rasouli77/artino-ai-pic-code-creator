@@ -1,7 +1,7 @@
 
 // let number = 0
 // Retrieve the stored value from localStorage or default to 0
-let number = parseInt(localStorage.getItem('storedNumber')) || 60;
+let number = parseInt(localStorage.getItem('storedNumber')) || 995;
 function test() {
 
     // subject: the first dropdown
@@ -35,7 +35,9 @@ function test() {
     
     number++;
     
-  
+    if (number = 999) {
+        number = 0;
+    }
 
  
     var result = document.querySelector(".result");
@@ -61,20 +63,15 @@ function test() {
     }
 
     var week = Math.ceil(days / 7)
-    let previousWeek = week;
+    
 
-    // Check if week has changed
-  if (previousWeek !== week) {
-    // Reset number to 0 when week changes
-    number = 0;
-  }
+    
 
 
     result.innerHTML = year.toString().slice(-1) + week + source.options[source.selectedIndex].value + subject.options[subject.selectedIndex].value + style.options[style.selectedIndex].value + ratio.options[ratio.selectedIndex].value + number.toString().padStart(3, '0') + type.options[type.selectedIndex].value;
 
     
-     // Update previousWeek for the next comparison
-     previousWeek = week;
+     
 
      // Store the updated number in localStorage
      localStorage.setItem('storedNumber', number);
